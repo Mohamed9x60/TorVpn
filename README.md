@@ -4,7 +4,7 @@ PIF-PEONEI script allows you to change your IP address using the Tor network. It
 
 ## Features 
 - **Starting the Tor Service:** Starts the Tor service to establish a connection with the Tor network. - **Change IP Address:** Change the IP address using the Tor network. - **Play VPN Session:** Launch a VPN session with a customizable duration and time interval between IP changes. - **Show contact information:** Displays contact information for support. It saves the IP you used in a file called temp_ip.txt
-![Screenshot_٢٠٢٤٠٣٠٥-١٥٢٦٣٧_Termux](https://github.com/Mohamed9x60/TorVpn/assets/162137526/cf5ef618-821b-437f-8871-236d9481329e)
+
 
 
 ## Dependencies
@@ -64,12 +64,21 @@ If the problem persists, execute this command ` pkill -f tor ` to kill the runni
 
 - [ Mohamed Fouad ]([ https://github.com/Mohamed9x60 ])
 
+## Screenshot
+
+![Screenshot_٢٠٢٤٠٣٠٥-١٥٢٦٣٧_Termux](https://github.com/Mohamed9x60/TorVpn/assets/162137526/0c75391c-016b-4bee-b946-f9a9d713b473)
+
+
 
 ## Video explanation
 
 
 
+
+
 Uploading XRecorder_Edited_٠٥٠٣٢٠٢٤_١٥٠٣٢٥.mp4…
+
+
 
 
 
