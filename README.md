@@ -1,13 +1,11 @@
 # Tor VPN <..PIF PEONEI..> Changer
 
-This Python script allows you to change your IP address using the Tor network. It runs a VPN session that changes the IP address at regular intervals.
+PIF-PEONEI script allows you to change your IP address using the Tor network. It runs a VPN session that changes the IP address at regular intervals that you specify.
 
-## Features
+## Features 
+- **Starting the Tor Service:** Starts the Tor service to establish a connection with the Tor network. - **Change IP Address:** Change the IP address using the Tor network. - **Play VPN Session:** Launch a VPN session with a customizable duration and time interval between IP changes. - **Show contact information:** Displays contact information for support. It saves the IP you used in a file called temp_ip.txt
+![Screenshot_٢٠٢٤٠٣٠٥-١٥٢٦٣٧_Termux](https://github.com/Mohamed9x60/TorVpn/assets/162137526/cf5ef618-821b-437f-8871-236d9481329e)
 
-- **Start Tor Service:** Initiates the Tor service to establish a connection with the Tor network.
-- **Change IP Address:** Changes the IP address using the Tor network.
-- **Run VPN Session:** Runs a VPN session with customizable duration and interval between IP changes.
-- **Show Contact Information:** Displays contact information for support.
 
 ## Dependencies
 
@@ -34,7 +32,7 @@ This Python script allows you to change your IP address using the Tor network. I
 
 3. Enter the tool file ` cd TorVpn `.
 
-4. Install dependencies using ` pip install -r requirements.txt `.
+4.Install dependencies using ` pip install -r requirements.txt `.
  
 5. Run the script using ` sudo python3 PIF-PEONEI.py `.
 
@@ -46,11 +44,11 @@ This Python script allows you to change your IP address using the Tor network. I
 
 2. install TorVpn ` git clone https://github.com/Mohamed9x60/TorVpn.git `.
 
-3 .Enter the tool file ` cd TorVpn `.
+3.Enter the tool file ` cd TorVpn `.
 
-4. Install dependencies using ` pip install -r requirements.txt `.
+4.Install dependencies using ` pip install -r requirements.txt `.
  
-5. Run the script using ` python3 PIF-PEONEI.py `.
+6. Run the script using ` python3 PIF-PEONEI.py `.
 
 
 
@@ -64,12 +62,16 @@ If the problem persists, execute this command ` pkill -f tor ` to kill the runni
 
 ## Contributors
 
-- [Mohamed Fouad]([https://github.com/Mohamed9x60)]
+- [ Mohamed Fouad ]([ https://github.com/Mohamed9x60 ])
 
 
 ## Video explanation
 
+
+
 Uploading XRecorder_Edited_٠٥٠٣٢٠٢٤_١٥٠٣٢٥.mp4…
+
+
 
 ## License
 
