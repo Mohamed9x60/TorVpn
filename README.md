@@ -1,4 +1,4 @@
-## Tor VPN <..PIF PEONEI..> Changer
+## Tor VPN  *PIF PEONEI* Changer
 
 PIF-PEONEI script allows you to change your IP address using the Tor network. It runs a VPN session that changes the IP address at regular intervals that you specify.
 
@@ -36,20 +36,24 @@ PIF-PEONEI script allows you to change your IP address using the Tor network. It
          zypper install tor torsocks -y `
 
 ## Install repositories Kali Linux
-`
-git clone https://github.com/Mohamed9x60/TorVpn.git
-cd TorVpn
-pip install -r requirements.txt
-sudo python3 PIF-PEONEI.py
-`.
+
+
+    git clone https://github.com/Mohamed9x60/TorVpn.git
+    cd TorVpn
+    pip install -r requirements.txt
+    sudo python3 PIF-PEONEI.py
+    
+    
+
+
 ## Install repositories on Termux
-`
-pkg install tor
-git clone https://github.com/Mohamed9x60/TorVpn.git
-cd TorVpn
-pip install -r requirements.txt
-python3 PIF-PEONEI.py
-`.
+
+    git clone https://github.com/Mohamed9x60/TorVpn.git
+    cd TorVpn
+    pip install -r requirements.txt
+    python3 PIF-PEONEI.py
+    
+
 
 ## Known Issues and Fixes
 
