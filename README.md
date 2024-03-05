@@ -18,27 +18,38 @@ PIF-PEONEI script allows you to change your IP address using the Tor network. It
 - `stem`library
 - `colorama` library
 
-## Before installation
+## Do you need the tor package to run this. Instal tor first!
+> DEBIAN:
+              
+          apt update && apt upgrade && apt install tor torsocks -y
+> GENTOO: 
+       
+          emerge tor torsocks
 
-- Update packages and upgrade repositories 
-  - `sudo apt update `
-  - `sudo apt upgrade `
+> ARCH: 
+          
+         pacman tor torsocks -Syu
 
-## Use on Kali Linux
+> OPENSUSE: 
+          
+   
+         zypper install tor torsocks -y `
 
-1. Install tor: `sudo apt install tor`.
-2. Clone TorVpn: `git clone https://github.com/Mohamed9x60/TorVpn.git`.
-3. Enter the tool directory: `cd TorVpn`.
-4. Install dependencies using: `pip install -r requirements.txt`.
-5. Run the script using: `sudo python3 PIF-PEONEI.py`.
-
-## Use on Termux
-
-1. Install tor: `pkg install tor`.
-2. Clone TorVpn: `git clone https://github.com/Mohamed9x60/TorVpn.git`.
-3. Enter the tool directory: `cd TorVpn`.
-4. Install dependencies using: `pip install -r requirements.txt`.
-5. Run the script using: `python3 PIF-PEONEI.py`.
+## Install repositories Kali Linux
+`
+git clone https://github.com/Mohamed9x60/TorVpn.git
+cd TorVpn
+pip install -r requirements.txt
+sudo python3 PIF-PEONEI.py
+`.
+## Install repositories on Termux
+`
+pkg install tor
+git clone https://github.com/Mohamed9x60/TorVpn.git
+cd TorVpn
+pip install -r requirements.txt
+python3 PIF-PEONEI.py
+`.
 
 ## Known Issues and Fixes
 
