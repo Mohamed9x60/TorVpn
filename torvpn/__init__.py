@@ -23,9 +23,9 @@ error_charater = f'[{error_charater}]'
 _os_ = platform.system().strip().lower()
 # Commands Depend On System
 commands = {
-    "arch": "pacman -Syu tor torsocks",
-    "debian": "apt update && apt upgrade && apt install tor torsocks -y",
-    "windows": "choco install tor torsocks -y"
+    "arch": "pacman -Syu tor",
+    "debian": "apt update && apt upgrade && apt install tor",
+    "windows": "choco install tor"
 }
 if _os_ not in commands.keys():
     print(f"{error_charater} Your System Isn't Supported At The Moment.")
@@ -37,12 +37,13 @@ class Init():
     # This Class For Installing Libraries | Adding TorSocks To The Path
     # | Checking If Python Installed
     def clear_console(self):
-        os.system("cls") if platform.system().lower() == "windows" else os.system('clear')
+        os.system("cls")
 
     def install_tor_package(self):
         # Use subprocess to run the command to install the package
         try:
             subprocess.run(commands[_os_], shell=True, check=True)
+            self.clear_console()
         except subprocess.CalledProcessError:
             print(f"{error_charater} Package installation failed.")
             exit()
