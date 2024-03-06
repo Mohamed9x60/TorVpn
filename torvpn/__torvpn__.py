@@ -1,19 +1,17 @@
-import time
-import os
-import random
-import logging
+import random,time,random,os,logging
 import stem.process
 from stem.control import Controller
-from colorama import init, Fore, Style
-
-# Initialize colorama for colored text
-init()
+from colorama import  Fore, Style
 
 # Configure logging
-logging.basicConfig(filename='tor_ip_changer.log', level=logging.INFO,
+logging.basicConfig(filename='logging.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
+
 class TorIPChanger:
+
+        
+
     def __init__(self):
         # Contact information
         self.username = "Eng: Mohamed Fouad"
@@ -118,15 +116,3 @@ class TorIPChanger:
     def print_bootstrap_lines(self, line):
         if "Bootstrapped" in line:
             print(line)
-
-if __name__ == "__main__":
-    # Create an object for IP address changer
-    vpn = TorIPChanger()
-    print(Fore.MAGENTA + "Welcome to Tor VPN Changer" + Style.RESET_ALL)
-
-    # Get VPN session duration and IP change interval from the user
-    duration = input("Enter the duration of the VPN session in minutes (Enter 'inf' for infinite duration): ")
-    interval = input("Enter the interval between IP changes in seconds: ")
-
-    # Run VPN with the specified duration and interval
-    vpn.run(float(duration) if duration != 'inf' else float('inf'), int(interval))
