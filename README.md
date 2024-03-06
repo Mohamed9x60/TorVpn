@@ -1,7 +1,3 @@
-
-## Important Alert *!*
-The project is currently in maintenance
-
 ## Tor VPN  *PIF PEONEI* Changer
 
 PIF-PEONEI script allows you to change your IP address using the Tor network. It runs a VPN session that changes the IP address at regular intervals that you specify.
@@ -67,16 +63,11 @@ PIF-PEONEI script allows you to change your IP address using the Tor network. It
 ## Contributors
 
 - [Mohamed Fouad](https://github.com/Mohamed9x60)
-
+- [Facebook](https://www.facebook.com/profile.php?id=100014784496206&mibextid=ZbWKwL)
 ## Screenshot
 
 ![Screenshot_٢٠٢٤٠٣٠٥-١٥٢٦٣٧_Termux](https://github.com/Mohamed9x60/TorVpn/assets/162137526/0c75391c-016b-4bee-b946-f9a9d713b473)
 
-## Video explanation
-
-
-
-Uploading XRecorder_Edited_٠٥٠٣٢٠٢٤_١٥٠٣٢٥.mp4…
 
 
 
