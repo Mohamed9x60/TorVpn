@@ -32,7 +32,7 @@ class TorIPChanger:
 
         try:
             # Attempt to start Tor service on multiple ports
-            available_ports = [9050, 9051, 9052, 9053, 9054]
+            available_ports = [9050, 9051, 9052, 9053,  9054, 9055, 9056, 9057, 9058, 9059, 9060, 9061, 9062, 9063, 9064, 9065]
             for port in available_ports:
                 tor_process = stem.process.launch_tor_with_config(
                     config={'SocksPort': str(port)},
