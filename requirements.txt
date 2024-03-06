@@ -1,5 +1,5 @@
-random2
-logging4
+random
+logging
 stem
 colorama
 

@@ -1,0 +1,2 @@
+2024-03-06 06:55:46,527 - DEBUG - System call (failed): tor --version (error: [WinError 2] The system cannot find the file specified)
+2024-03-06 06:55:46,538 - ERROR - Failed to start Tor service: Failed to start Tor service: 'tor' isn't available on your system. Maybe it's not in your PATH?
