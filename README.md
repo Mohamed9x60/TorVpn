@@ -1,6 +1,3 @@
-## alert !
-It is turned off for maintenance
-
 ## Tor VPN  *PIF PEONEI* Changer
 
 PIF-PEONEI script allows you to change your IP address using the Tor network. It runs a VPN session that changes the IP address at regular intervals that you specify.
@@ -62,6 +59,40 @@ PIF-PEONEI script allows you to change your IP address using the Tor network. It
 
 1. **OSError: Failed to start Tor service: reached  
 '' the specified seconds'' timeout without success**: This error occurs when the script fails to start the Tor service within the specified timeout period. Check your internet connection, firewall settings, and ensure that Tor is allowed to connect to the internet. If the problem persists, execute this command `pkill -f tor` to kill the running Tor session.
+
+**additional**
+
+**Command to kill all running Tor sessions:**
+
+```
+pkill -9 tor
+```
+
+**Explanation of the command:**
+
+* **pkill:** A tool for killing processes.
+* **-9:** A strong kill signal sent to all running Tor processes.
+* **tor:** The name of the process you want to kill.
+
+**Notes:**
+
+* This command will kill all running Tor sessions, including those running in the background.
+* This command may not work on some operating systems.
+
+**Alternatives:**
+
+* You can use the task manager to kill Tor sessions manually.
+* You can use a tool like `ps aux | grep tor` to list all running Tor processes and then use `kill` or `killall` to kill them.
+
+**Tips:**
+
+* If you are having problems with Tor, try restarting it using the command `service tor restart`.
+* You can also use the command `tor --version` to check the version of Tor you are using.
+* If you need further assistance, you can visit the Tor website: [https://www.torproject.org/]
+
+
+
+
 
 ## Contributors
 
