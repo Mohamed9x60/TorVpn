@@ -8,6 +8,24 @@ PIF-PEONEI script allows you to change your IP address using the Tor network. It
 - **Run VPN Session:** Initiates a VPN session with customizable duration and time interval between IP changes.
 - **Show Contact Information:** Displays contact details for support. It also saves the IP address you used in a file named temp_ip.txt.
 
+- **Fixes:**
+
+Fixed code runtime issues.
+Additions:
+
+-1 Added `random.shuffle()`to the code to generate a random list of countries.
+-2 Added `generate_countries_list:` A function to generate a random list of countries.
+Here's a more detailed explanation of the changes:
+
+Fixes:
+
+- The original code had some runtime issues, such as not being able to find available ports or failing to start the Tor service. These issues have been fixed in the updated code.
+Additions:
+
+- The original code generated a fixed list of countries. The updated code uses the  `random.shuffle()`function to generate a random list of countries, making it more difficult to track the user's location.
+- The updated code includes a new function called`generate_countries_list.`This function generates a random list of countries from a predefined list of continents. 
+- This makes it easier to customize the list of countries used by the script.
+
 ## Dependencies
 
 - Python 3.x
