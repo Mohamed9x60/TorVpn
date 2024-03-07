@@ -5,6 +5,7 @@ import logging
 import stem.process
 from stem.control import Controller
 from colorama import init, Fore, Style
+import socket
 
 # Initialize colorama for colored text
 init()
@@ -18,6 +19,28 @@ class TorIPChanger:
         # Contact information
         self.username = "Eng: Mohamed Fouad"
         self.phone_number = "01021213274"
+        self.countries = self.generate_countries_list()
+
+    def generate_countries_list(self):
+        africa = ["Algeria", "Egypt", "Nigeria", "South Africa", "Morocco", "Kenya", "Ethiopia", "Ghana", "Tanzania", "Uganda"]
+        asia = ["China", "India", "Indonesia", "Pakistan", "Bangladesh", "Japan", "Philippines", "Vietnam", "Turkey", "Iran"]
+        south_america = ["Brazil", "Colombia", "Argentina", "Peru", "Venezuela", "Chile", "Ecuador", "Bolivia", "Paraguay", "Uruguay"]
+        north_america = ["United States", "Canada", "Mexico", "Guatemala", "Cuba", "Haiti", "Dominican Republic", "Honduras", "Nicaragua", "El Salvador"]
+        australia = ["Australia", "New Zealand", "Papua New Guinea", "Fiji", "Solomon Islands", "Vanuatu", "Samoa", "Kiribati", "Tonga", "Tuvalu"]
+        europe = ["Russia", "Germany", "United Kingdom", "France", "Italy", "Spain", "Ukraine", "Poland", "Romania", "Netherlands"]
+
+        all_countries = africa + asia + south_america + north_america + australia + europe
+        random.shuffle(all_countries)
+        return all_countries[:200]
+
+    def check_ports_availability(self):
+        available_ports = []
+        for port in [9050, 9051, 9052, 9053, 9054]:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                result = s.connect_ex(('127.0.0.1', port))
+                if result != 0:
+                    available_ports.append(port)
+        return available_ports
 
     def start_tor_service(self):
         # Clear the screen
@@ -33,8 +56,16 @@ class TorIPChanger:
 """ + Style.RESET_ALL)
 
         try:
-            # Attempt to start Tor service on multiple ports
-            available_ports = [9050, 9051, 9052, 9053, 9054]
+            # Check if any Tor sessions are running and stop them
+            self.stop_existing_tor_process()
+
+            # Check available ports
+            available_ports = self.check_ports_availability()
+            if not available_ports:
+                print("No available ports to start Tor service.")
+                exit()
+
+            # Attempt to start Tor service on available ports
             for port in available_ports:
                 tor_process = stem.process.launch_tor_with_config(
                     config={'SocksPort': str(port)},
@@ -42,26 +73,21 @@ class TorIPChanger:
                 )
                 logging.info(f"Tor service started on port {port}")
                 return  # If successful, exit the function
+
         except OSError as e:
-            if "Address already in use" in str(e):
-                print(f"Port {port} is already in use.")
-                self.stop_existing_tor_process(port)
-            else:
-                # If there's another unexpected error, re-raise the exception to handle it elsewhere
-                raise OSError(f"Failed to start Tor service: {e}")
+            raise OSError(f"Failed to start Tor service: {e}")
 
-        # If reached here, unable to find a free port to start Tor service
-        print("Unable to find a free port to start Tor service.")
-        exit()
-
-    def stop_existing_tor_process(self, port):
+    def stop_existing_tor_process(self):
         try:
-            with Controller.from_port(port=port) as controller:
+            with Controller.from_port(port=9050) as controller:
                 controller.authenticate()
-                controller.signal(stem.Signal.SHUTDOWN)
-                logging.info(f"Stopped Tor service using port {port}")
+                for tor_pid in controller.get_pid_list():
+                    logging.info(f"Stopping Tor process with PID: {tor_pid}")
+                    controller.terminate_process(tor_pid)
+                    time.sleep(1)  # Wait for process termination
+                logging.info("All existing Tor sessions have been stopped.")
         except Exception as e:
-            logging.error(f"Failed to stop Tor service using port {port}: {e}")
+            logging.error(f"Failed to stop existing Tor sessions: {e}")
 
     def change_ip(self):
         try:
