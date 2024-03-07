@@ -101,12 +101,12 @@ pkill -9 tor
 **Alternatives:**
 
 * You can use the task manager to kill Tor sessions manually.
-* You can use a tool like `ps aux | grep tor` to list all running Tor processes and then use `kill` or `killall` to kill them.
+* You can use a tool like ```ps aux | grep tor``` to list all running Tor processes and then use  ```kill```  or  ```killall``` to kill them.
 
 **Tips:**
 
-* If you are having problems with Tor, try restarting it using the command `service tor restart`.
-* You can also use the command `tor --version` to check the version of Tor you are using.
+* If you are having problems with Tor, try restarting it using the command```service tor restart```.
+* You can also use the command  ```tor --version```  to check the version of Tor you are using.
 * If you need further assistance, you can visit the [Tor](https://www.torproject.org/)
 
 
@@ -116,7 +116,7 @@ pkill -9 tor
 ## Contributors
 
 - [Mohamed Fouad](https://github.com/Mohamed9x60)
-- [Facebook](https://www.facebook.com/profile.php?id=100014784496206&mibextid=ZbWKwL)
+- [My Facebook](https://www.facebook.com/profile.php?id=100014784496206&mibextid=ZbWKwL)
 ## Screenshot
 
 ![Screenshot_٢٠٢٤٠٣٠٥-١٥٢٦٣٧_Termux](https://github.com/Mohamed9x60/TorVpn/assets/162137526/0c75391c-016b-4bee-b946-f9a9d713b473)
