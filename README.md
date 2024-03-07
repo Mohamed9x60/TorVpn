@@ -17,6 +17,7 @@ PIF-PEONEI script allows you to change your IP address using the Tor network. It
 - `logging4` library
 - `stem`library
 - `colorama` library
+- `socket`library
 
 ## Do you need the tor package to run this. Instal tor first!
 > DEBIAN:
@@ -88,7 +89,7 @@ pkill -9 tor
 
 * If you are having problems with Tor, try restarting it using the command `service tor restart`.
 * You can also use the command `tor --version` to check the version of Tor you are using.
-* If you need further assistance, you can visit the Tor website: [https://www.torproject.org/]
+* If you need further assistance, you can visit the [Tor](https://www.torproject.org/)
 
 
 
