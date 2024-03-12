@@ -1,5 +1,5 @@
-random
-logging
-stem
-colorama
-socket
+random2==1.0.2
+logging4==0.0.2
+stem==1.8.2
+colorama==0.4.6
+
