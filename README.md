@@ -80,7 +80,8 @@ Additions:
 '' the specified seconds'' timeout without success**: This error occurs when the script fails to start the Tor service within the specified timeout period. Check your internet connection, firewall settings, and ensure that Tor is allowed to connect to the internet. If the problem persists, execute this command `pkill -f tor` to kill the running Tor session.
 
 **additional**
--*The windows.py file has been added to work on Windows
+> additional:
+- The **windows.py** file has been added to work on Windows
 
 **Command to kill all running Tor sessions:**
 
